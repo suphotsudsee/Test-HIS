@@ -1,0 +1,46 @@
+:root {
+  font-family: "Noto Sans Thai", "Leelawadee UI", system-ui, sans-serif;
+  color: #17202a;
+  background: #f4f7f9;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+
+.app-shell { min-height: 100vh; }
+.topbar {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 12px 28px;
+  background: white;
+  border-bottom: 1px solid #dce3e8;
+}
+.topbar strong { display: block; font-size: 20px; }
+.topbar span { font-size: 12px; color: #667580; }
+.status { font-size: 13px; font-weight: 600; }
+.content { max-width: 1100px; margin: 0 auto; padding: 56px 28px; }
+.eyebrow { margin: 0; font-size: 13px; font-weight: 700; text-transform: uppercase; }
+h1 { margin: 8px 0 12px; font-size: clamp(30px, 5vw, 48px); }
+.content > p { max-width: 760px; line-height: 1.75; }
+.patient-banner {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid #ccd6dc;
+  border-radius: 10px;
+  background: #ccd6dc;
+}
+.patient-banner > div { padding: 16px; background: white; }
+.patient-banner small { display: block; margin-bottom: 5px; color: #687780; }
+.patient-banner strong { display: block; }
+
+@media (max-width: 720px) {
+  .patient-banner { grid-template-columns: 1fr 1fr; }
+  .topbar { padding-inline: 18px; }
+  .content { padding: 36px 18px; }
+}
